@@ -76,7 +76,7 @@
 ;; Main code:
 
 (defun ngn-merge-with-gnus-newsrc (groups)
-  "Merge the existing group list with the Gnus group list (if available)."
+  "Merge the existing group list GROUPS with the Gnus group list (if available)."
   (if (boundp 'gnus-newsrc-alist)
       (append (loop for group in (mapcar #'car (symbol-value 'gnus-newsrc-alist))
                     unless (assoc group groups)
@@ -137,11 +137,13 @@
 (defun ngn-insert (no-format)
   "Insert a newsgroup name, formatting the name depending on the prefix.
 
-If no prefix is provided then `ngn-insert-url' is used to insert the group
-name. If a prefix is provided then `ngn-insert-name' is used."
+If NO-FORMAT is 't' (or the command is invoked with
+\\[universal-argument]) then `ngn-insert-url' is used to insert
+the group name. If a prefix is provided then `ngn-insert-name' is
+used."
   (interactive "P")
   (call-interactively (if no-format #'ngn-insert-name #'ngn-insert-url)))
 
 (provide 'ngn)
 
-;;; ngn.el ends here.
+;;; ngn.el ends here
