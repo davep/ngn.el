@@ -14,16 +14,6 @@
 ;;
 ;;   <URL:http://www.davep.org/emacs/#ngn.el>
 
-;;; INSTALLATION:
-;;
-;; o Drop ngn.el somwehere into your `load-path'. Try your site-lisp
-;;   directory for example (you might also want to byte-compile the file).
-;;
-;; o Add the following autoload statements to your ~/.emacs file:
-;;
-;;   (autoload 'ngn-insert-name "ngn" "Insert a newsgroup name at `point'" t)
-;;   (autoload 'ngn-insert-url  "ngn" "Insert a newsgroup URL at `point'" t)
-
 ;;; TODO:
 ;;
 ;; o Do away with `ngn-newsrc' and `ngn-merge-with-gnus-newsrc' and,
