@@ -78,9 +78,9 @@
 (defun ngn-merge-with-gnus-newsrc (groups)
   "Merge the existing group list GROUPS with the Gnus group list (if available)."
   (if (boundp 'gnus-newsrc-alist)
-      (append (loop for group in (mapcar #'car (symbol-value 'gnus-newsrc-alist))
-                    unless (assoc group groups)
-                    collect (list group))
+      (append (cl-loop for group in (mapcar #'car (symbol-value 'gnus-newsrc-alist))
+                 unless (assoc group groups)
+                 collect (list group))
               groups)
     groups))
 
@@ -96,11 +96,11 @@
                  (insert-file-contents-literally ngn-newsrc)
                  (while (re-search-forward "[:!].*$" nil t)
                    (replace-match "")))
-               (loop until (eobp)
-                     collect (list (buffer-substring-no-properties
-                                    (line-beginning-position)
-                                    (line-end-position)))
-                     do (forward-line))))))))
+               (cl-loop until (eobp)
+                  collect (list (buffer-substring-no-properties
+                                 (line-beginning-position)
+                                 (line-end-position)))
+                  do (forward-line))))))))
 
 (defun ngn-reader ()
   "Prompt the user for a newsgroup name, using completion."
