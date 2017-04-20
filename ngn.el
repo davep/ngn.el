@@ -1,18 +1,25 @@
-;;; ngn.el --- Quickly insert a newsgroup name into a buffer using completion.
-;; Copyright 2000,2001 by Dave Pearson <davep@davep.org>
-;; $Revision: 1.5 $
+;;; ngn.el --- Quickly insert a newsgroup name.
+;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
+
+;; Author: Dave Pearson <davep@davep.org>
+;; Version: 1.5
+;; Keywords: convenience, news, gnus, newsrc
+;; URL: https://github.com/davep/ngn.el
+;; Package-Requires: ((cl-lib "0.5"))
 
 ;; ngn.el is free software distributed under the terms of the GNU General
-;; Public Licence, version 2. For details see the file COPYING.
+;; Public Licence, version 2 or (at your option) any later version. For
+;; details see the file COPYING.
 
 ;;; Commentary:
 ;;
 ;; ngn.el provides commands for quickly inserting a newsgroup name into a
-;; buffer.
+;; buffer, using complention, building the list from your newsgroup name
+;; sources.
 ;;
 ;; The latest ngn.el is always available from:
 ;;
-;;   <URL:http://www.davep.org/emacs/#ngn.el>
+;;   <URL:https://github.com/davep/ngn.el>
 
 ;;; TODO:
 ;;
