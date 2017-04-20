@@ -40,13 +40,13 @@
 ;; Attempt to handle older/other emacs.
 
 (eval-and-compile
-  
+
   ;; If customize isn't available just use defvar instead.
   (unless (fboundp 'defgroup)
     (defmacro defgroup  (&rest rest) nil)
     (defmacro defcustom (symbol init docstring &rest rest)
       `(defvar ,symbol ,init ,docstring)))
-  
+
   ;; If `line-beginning-position' isn't available provide one.
   (unless (fboundp 'line-beginning-position)
     (defun line-beginning-position (&optional n)
@@ -109,7 +109,7 @@
                     collect (list group))
               groups)
     groups))
-            
+
 (defun ngn-load-group-names ()
   "Load the newsgroup list for use with `completing-read'."
   (if (and ngn-cache ngn-cache-p)
