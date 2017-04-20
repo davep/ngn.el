@@ -45,23 +45,23 @@
   :prefix "ngn-")
 
 (defcustom ngn-newsrc "~/.newsrc"
-  "*Name of your newsrc file."
+  "Name of your newsrc file."
   :type  'file
   :group 'ngn)
 
 (defcustom ngn-cache-p t
-  "*Should we cache the newsgroup names?"
+  "Should we cache the newsgroup names?"
   :type  'boolean
   :group 'ngn)
 
 (defcustom ngn-must-exist t
-  "*Must the input group name be a known group?"
+  "Must the input group name be a known group?"
   :type  'boolean
   :group 'ngn)
 
 (defcustom ngn-url-format-function #'(lambda (group)
                                        (format "<URL:news:%s>" group))
-  "*Function to format a newsgroup name as an URL."
+  "Function to format a newsgroup name as an URL."
   :type  'function
   :group 'ngn)
 
