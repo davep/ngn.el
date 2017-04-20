@@ -2,7 +2,7 @@
 ;; Copyright 2000-2017 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.5
+;; Version: 1.6
 ;; Keywords: convenience, news, gnus, newsrc
 ;; URL: https://github.com/davep/ngn.el
 ;; Package-Requires: ((cl-lib "0.5"))
