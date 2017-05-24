@@ -56,8 +56,8 @@
   :type  'boolean
   :group 'ngn)
 
-(defcustom ngn-url-format-function #'(lambda (group)
-                                       (format "<URL:news:%s>" group))
+(defcustom ngn-url-format-function (lambda (group)
+                                     (format "<URL:news:%s>" group))
   "Function to format a newsgroup name as an URL."
   :type  'function
   :group 'ngn)
